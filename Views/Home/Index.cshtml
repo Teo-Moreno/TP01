@@ -1,8 +1,18 @@
 ﻿@{
     ViewData["Title"] = "Home Page";
 }
-
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
-</div>
+<section class="integrantes">
+    <h1>Grupo: Los Tchiffan's</h1>
+    <img src='img/logo.png' alt='logo sin cargar'>
+    <ul>
+        @foreach(int DNI in ViewBag.Grupo.DevolverIntegrantes().Keys)
+        {
+            Integrante integrante = ViewBag.Grupo.DevolverIntegrantes()[DNI];
+            <li>
+                <p>@integrante.DevolverNombre()</p>
+                <img src='img/@(integrante.DevolverNombre()).jpg' alt='Imagen de @integrante.DevolverNombre()'>
+                <a href='@Url.Action("SelectIntegrante","Home", new { DNI = integrante.DevolverDNI() })'>Link de integrante</a>
+            </li>
+        }
+    <ul>
+<section>

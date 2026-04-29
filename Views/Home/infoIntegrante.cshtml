@@ -1,0 +1,31 @@
+<h1>Detalle del Integrante</h1>
+
+
+<ul>
+    <li><h2>@ViewBag.Integrante.DevolverNombre()</h2></li>
+    <li>DNI: @ViewBag.Integrante.DevolverDNI()</li>
+    <li>Fecha de Nacimiento: @ViewBag.Integrante.DevolverFechanacimiento()</li>
+    <img src='img/@(ViewBag.Integrante.DevolverNombre()).jpg'>
+    <h3>Familiares</h3>
+    <ul>
+    @foreach(string familiar in ViewBag.Integrante.DevolverListFamiliares())
+        {
+            <li>
+                <p>@familiar</p>
+            </li>
+        }
+    </ul>
+    <h3>Intereses</h3>
+    <ul>
+    @foreach(string interes in ViewBag.Integrante.DevolverListintereses())
+        {
+            <li>
+                <p>@interes</p>
+            </li>
+        }
+    </ul>
+</ul>
+
+
+<p>
+    <a href='@Url.Action("Index","Integrantes")'>Volver al catálogo</a>
