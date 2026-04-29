@@ -29,3 +29,41 @@ body {
 .form-floating > .form-control-plaintext:focus::placeholder, .form-floating > .form-control:focus::placeholder {
   text-align: start;
 }
+
+.galeria {
+  text-align: center; 
+}
+
+
+.galeria img {
+  width: 350px;        
+  margin: 2px;        
+  border: 2px solid black;
+}
+
+*{
+  border: 2px solid black;
+  margin: 0px;
+  padding: 0px;
+}
+
+ul img{
+  width: 145px;        
+  margin: 1.5px;        
+}
+
+ul li p{
+  text-transform: capitalize;
+}
+
+body{
+  background-color: darkorchid;
+}
+
+main{
+  background-color: blueviolet;
+}
+
+header{
+  background-color: gainsboro;
+}
