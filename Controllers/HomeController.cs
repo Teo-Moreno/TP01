@@ -15,7 +15,16 @@ public class HomeController : Controller
 
     public IActionResult Index()
     {
+        Grupo grupo = new Grupo();
+        ViewBag.Grupo = grupo;
         return View();
+    }
+
+    public IActionResult SelectIntegrante(int DNI)
+    {
+        Grupo grupo = new Grupo();
+        ViewBag.Integrante = grupo.GetIntegrante(DNI);
+        return View("infoIntegrante");
     }
 
     public IActionResult Privacy()
